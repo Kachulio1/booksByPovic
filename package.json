@@ -5,5 +5,8 @@
   "main": "index.js",
   "repository": "git@github.com:Kachulio1/booksByPovic.git",
   "author": "kachulio1 <jngugi88@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "yarn"
+  }
 }

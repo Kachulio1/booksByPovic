@@ -1,0 +1,9 @@
+{
+  "name": "booksByPovic",
+  "version": "1.0.0",
+  "description": "Books By Povic",
+  "main": "index.js",
+  "repository": "git@github.com:Kachulio1/booksByPovic.git",
+  "author": "kachulio1 <jngugi88@gmail.com>",
+  "license": "MIT"
+}

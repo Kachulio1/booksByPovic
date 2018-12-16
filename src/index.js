@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
 
-const Wink = () => <span>'😉'</span>;
+import { Wink } from "./Wink";
 
-render(Wink(), document.getElementById('root'))
+render(Wink(), document.getElementById("root"));

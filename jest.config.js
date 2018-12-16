@@ -3,10 +3,13 @@ module.exports = {
   verbose: true,
   collectCoverage:true,
   setupTestFrameworkScriptFile: "<rootDir>/src/tests/setupTests.js",
-  coverageReporters:["lcov", "text"],
+  coverageReporters:[ "text", "lcov",],
   collectCoverageFrom: [
     "**/*.{js,jsx}",
+    "!**/*.{config}.{js}",
     "!**/node_modules/**",
-    "!**/vendor/**"
+    "!**/vendor/**",
+    "!**/coverage/**",
+    "!**/src/index.js"
   ]
 }

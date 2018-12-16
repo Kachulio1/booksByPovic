@@ -6,6 +6,7 @@ module.exports = {
   coverageReporters:["lcov", "text"],
   collectCoverageFrom: [
     "**/*.{js,jsx}",
+    "!**/*.{config}.{js}",
     "!**/node_modules/**",
     "!**/vendor/**",
     "!**/coverage/**",

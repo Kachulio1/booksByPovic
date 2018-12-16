@@ -9,7 +9,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
-    "test": "jest "
+    "test": "jest -- coverageReporters=text-lcov | coveralls"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

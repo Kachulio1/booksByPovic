@@ -5,7 +5,7 @@ import {Wink} from '../Wink';
 
 
 describe('Wink', () => {
-    it('should wink', () => {
+    it('should render a wink emoji', () => {
         const component = shallow(<Wink/>)
         expect(component.find('span').text()).toBe("😉")
     })

@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/booksByPovic
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:8-browsers
     steps:
       - checkout
       - restore_cache:
@@ -15,6 +15,15 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+      # start the server for e2e tests
+      - run:
+          name: Start Server
+          command: yarn start
+          background: true
+      - run:
+          name: waiting for node server to start
+          command: wget --retry-connrefused --waitretry=2 -t 10 "http://localhost:8080"
+  
       - run: yarn test
       - run:
           name: Collect test coverage

@@ -11,11 +11,11 @@ beforeAll(async () => {
   page = await browser.newPage();
 });
 
-describe("Header", () => {
-  test("find  header on / route", async () => {
+describe("title", () => {
+  test("find  title on / route", async () => {
     await page.goto(`${baseURL}`);
     const result = await page.evaluate(() => {
-      return document.querySelector("header").innerText;
+      return document.querySelector("title").innerText;
     });
 
     expect(result).toEqual("Books By Povic");
